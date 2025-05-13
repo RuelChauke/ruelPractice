@@ -35,11 +35,11 @@ public class Customer {
 
     }
 
-    public Customer(String idNo, Long id, String name, String lastName, String email, String password, String phone, String address, LocalDate createDate) {
-        this.idNo = idNo;
+    public Customer(Long id, String name, String lastName, String idNo, String email, String password, String phone, String address, LocalDateTime createDate) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
+        this.idNo = idNo;
         this.email = email;
         this.password = password;
         this.phone = phone;
@@ -111,11 +111,11 @@ public class Customer {
         this.address = address;
     }
 
-    public LocalDate getCreateDate() {
+    public LocalDateTime getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(LocalDate createDate) {
+    public void setCreateDate(LocalDateTime createDate) {
         this.createDate = createDate;
     }
 }
