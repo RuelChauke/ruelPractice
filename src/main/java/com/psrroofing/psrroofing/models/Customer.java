@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Customer {
 
@@ -28,7 +29,7 @@ public class Customer {
     @Column(nullable = false)
     private String address;
     @Column
-    private LocalDate createDate;
+    private LocalDateTime createDate;
 
     public Customer(Long id) {
 
