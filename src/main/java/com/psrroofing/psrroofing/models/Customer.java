@@ -1,13 +1,12 @@
 package com.psrroofing.psrroofing.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "customers")
 public class Customer {
 
     @Id
@@ -31,7 +30,7 @@ public class Customer {
     @Column
     private LocalDateTime createDate;
 
-    public Customer(Long id) {
+    public Customer() {
 
     }
 
