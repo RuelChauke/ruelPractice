@@ -9,7 +9,7 @@ public class PsrRoofingApplication {
     public static void main(String[] args) {
         SpringApplication.run(PsrRoofingApplication.class, args);
 
-        System.out.println("PSR roofing application started");
+        System.out.println("PSR-roofing application started");
 
     }
 
