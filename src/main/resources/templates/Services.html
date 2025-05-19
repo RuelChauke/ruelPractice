@@ -3,8 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+
+        body{
+            background-color: skyblue;
+        }
+
+        nav{
+            background-color: grey;
+            border-radius: 30px 60px;
+        }
+
+        .nav-controller{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li{
+            margin: 0 1.5rem;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover{
+            color: white;
+
+        }
+
+    </style>
+
 </head>
 <body>
+
+<nav>
+    <div class="nav-controller">
+        <a href="/api/welcome" class="links">Home🏠</a>
+        <ul>
+            <!--            <li><a href="Welcome.html">Home</a></li>-->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/api/loginDash">SignIn</a></li>
+            <li><a href="/api/signup">SignUp</a></li>
+        </ul>
+    </div>
+</nav>
 
 </body>
 </html>

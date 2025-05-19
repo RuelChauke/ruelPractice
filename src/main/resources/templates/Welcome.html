@@ -3,8 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+
+        /*body{*/
+        /*    background-image: url("/images/welcome.jpg");*/
+        /*    background-size: 50%;*/
+        /*    background-repeat: no-repeat;*/
+        /*    background-attachment: fixed;*/
+        /*    background-*/
+        /*}*/
+
+        nav{
+            background: grey;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            /*position: sticky;*/
+            top: 0;
+            z-index: 1000;
+            border-radius: 30px 60px;
+        }
+
+        .nav-controller{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li{
+            margin: 0 1.5rem;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover{
+            color: #ff6b6b;
+            background-color: skyblue;
+        }
+
+        input{
+            background-color: skyblue;
+            border-radius: 8px;
+            height: 35px;
+            width: auto;
+        }
+
+        .div{
+            align-content: start;
+            margin: 2rem 1rem;
+            height: 620px;width:850px;
+            background-size: 100% 100%;
+            box-shadow: 20px 20px 10px gray;
+            animation: slider 17s linear infinite;
+            border-radius: 10px;
+        }
+
+        @keyframes slider {
+            0%{background-image: url(/images/welcome1.jpg)}
+            25%{background-image: url(/images/welcome2.jpg)}
+            50%{background-image: url(/images/welcome.jpg)}
+            75%{background-image: url(/images/welcome1.jpg)}
+            100%{background-image: url(/images/welcome2.jpg)}
+        }
+
+        .cont{
+            background-color: powderblue;
+            display: flex;
+            flex-direction: row;
+            border-radius: 8px;
+        }
+
+        .tex{
+            display: flex;
+            padding-left: 110px;
+            padding-top: 30px;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+    </style>
+
 </head>
 <body>
+
+<nav>
+    <div class="nav-controller">
+<!--        <a href="#" class="links">PSR-ROOFING🔨🪜</a>-->
+        <b><span>PSR-ROOFING🔨🪜</span></b>
+        <ul>
+            <li><b><a href="Welcome">Home</a></b></li>
+            <li><b><a href="#">About</a></b></li>
+            <li><b><a href="/api/servDash">Services</a></b></li>
+            <li><b><a href="#">Contact</a></b></li>
+            <li><b><a href="/api/loginDash">SignIn</a></b></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+
+<!--<div class="right">-->
+<!--    <img src="/images/welcome1.jpg">-->
+<!--</div>-->
+
+<div class="cont">
+
+<div class="div"></div>
+
+    <div class="tex">
+        <h2>PSR-ROOFING || Best services</h2>
+
+    <form action="/api/signup" method="get">
+        Hey are you new? <input type="submit" value="GET STARTED">
+    </form>
+
+    </div>
+
+</div>
 
 </body>
 </html>

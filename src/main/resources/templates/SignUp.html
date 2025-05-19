@@ -3,8 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+
+        body{
+            background-image: url("/images/opt.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        nav{
+            background-color: grey;
+            border-radius: 30px 60px;
+        }
+
+        .nav-controller{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li{
+            margin: 0 1.5rem;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #1a1a1a;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover{
+            color: white;
+
+        }
+
+    /*    form styling*/
+        .signup_title{
+
+            position: absolute;
+            left: 50%;
+            top: 0;
+            display: flex;
+            transform: translateX(-50%);
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            background-color: red;
+            border-radius: 0 0 20px 20px;
+            height: 70px;
+
+        }
+
+        .signup_title span{
+
+            color: white;
+            font-size: 30px;
+
+        }
+
+        .input_wrapper{
+
+            position: relative;
+            padding-top: 19px;
+            flex-direction: column;
+            display: flex;
+            margin: 20px 0;
+
+        }
+
+        .inputF{
+            border-radius: 10px;
+            height: 50px;
+            width: 100%;
+        }
+
+        .remember-forget{
+
+            /*justify-content: space-between;*/
+            display: flex;
+            font-size: 15px;
+
+        }
+
+        .glass-container{
+            position: relative;
+            width: 400px;
+            padding: 40px;
+            margin-top: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            /*box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);*/
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .input_submit{
+
+            background: lightblue;
+            width: 100%;
+            height: 50px;
+            font-size: 16px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            border: none;
+            transition: 0.3s;
+
+        }
+
+        .input_submit:hover{
+
+            background: lawngreen;
+
+        }
+
+        .form-container{
+            padding: 30px 30px 30px 35%;
+            align-items: center;
+
+        }
+
+    </style>
+
 </head>
 <body>
+
+<nav>
+    <div class="nav-controller">
+        <a href="/api/welcome" class="links">Home🏠</a>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="/api/servDash">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="/api/loginDash">SignIn</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="form-container">
+
+    <form action="/signup" method="post">
+
+        <div class="glass-container">
+
+            <div class="signup_title">
+                <span>SignUp</span>
+            </div>
+
+            <div class="input_wrapper">
+                <!--                <label>Password:</label>-->
+                <input type="text" class="inputF" id="name" required="" placeholder="Enter your name">
+            </div>
+
+            <div class="input_wrapper">
+                <!--                <label>Password:</label>-->
+                <input type="text" class="inputF" id="lastName" required="" placeholder="Enter your surname">
+            </div>
+
+            <div class="input_wrapper">
+                <!--                <label>Password:</label>-->
+                <input type="text" class="inputF" id="idNo" required="" placeholder="Enter your id number" maxlength="13">
+            </div>
+
+            <div class="input_wrapper">
+                <!--                <label>Email:</label>-->
+                <input type="email" class="inputF" id="email" required="" placeholder="Enter your email">
+            </div>
+
+            <div class="input_wrapper">
+                <!--                <label>Password:</label>-->
+                <input type="password" class="inputF" id="password" required="" placeholder="Enter your password" minlength="8">
+            </div>
+
+            <div class="input_wrapper">
+                <!--                <label>Password:</label>-->
+                <input type="tel" class="inputF" id="phone" required="" placeholder="Enter your cellphone number" maxlength="10">
+            </div>
+
+            <div class="input_wrapper">
+                <!--                <label>Password:</label>-->
+                <input type="text" class="inputF" id="address" required="" placeholder="Enter your physical">
+            </div>
+
+<!--            <div class="colum">-->
+                <div class="remember-forget">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" style="color: white">Remember Me</label>
+                </div>
+
+<!--            </div>-->
+
+            <div class="input_wrapper">
+                <input type="submit" id="pass" class="input_submit" required="" value="Register">
+            </div>
+
+            <div class="signup">
+                <span style="color: white">Already have an account? <a href="/api/loginDash">Sign Ip</a></span>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
 
 </body>
 </html>
