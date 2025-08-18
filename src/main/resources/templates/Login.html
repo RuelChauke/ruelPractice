@@ -44,8 +44,10 @@
         }
 
         nav a:hover{
-            color: white;
-
+            color: black;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: skyblue;
         }
 
         .input_submit{
@@ -183,7 +185,7 @@
 
 <div class="form-container">
 
-    <form action="/login" method="post">
+    <form action="/api/loggedIn" method="post">
 
         <div class="glass-container">
 
@@ -193,12 +195,12 @@
 
             <div class="input-wrapper1">
 <!--                <label>Email:</label>-->
-                <input type="email" class="inputF" id="email" required="" placeholder="Enter your email">
+                <input type="email" class="inputF" name="email" required="" placeholder="Enter your email">
             </div>
 
             <div class="input-wrapper2">
 <!--                <label>Password:</label>-->
-                <input type="password" class="inputF" id="password" required="" placeholder="Enter your password">
+                <input type="password" class="inputF" name="password" required="" placeholder="Enter your password">
             </div>
 
             <div class="colum">
