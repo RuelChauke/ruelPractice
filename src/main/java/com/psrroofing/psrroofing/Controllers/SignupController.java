@@ -18,7 +18,9 @@ public class SignupController {
 
     @GetMapping("/signup")
     public String viewDashbord(){
+
         return "SignUp";
+
     }
 
     @PostMapping("/signupUser")

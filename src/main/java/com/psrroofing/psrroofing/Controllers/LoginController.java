@@ -13,4 +13,11 @@ public class LoginController {
         return "Login";
     }
 
+    @GetMapping("/loggedin")
+    public String viewServices(){
+
+        return "Services";
+
+    }
+
 }

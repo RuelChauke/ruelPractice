@@ -14,6 +14,23 @@
         /*    background-*/
         /*}*/
 
+        body{
+            background-image: url("/images/butterfly-back.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+
+        }
+
+        .overlay{
+            background: rgba(0,0,0,0.7); /* darkness level */
+            min-height:100vh;
+            color:white;
+            background-size: cover;
+        }
+
         nav{
             background: grey;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -56,17 +73,18 @@
 
         input{
             background-color: skyblue;
-            border-radius: 8px;
+            border-radius: 12px;
             height: 35px;
             width: auto;
         }
 
         .div{
+            flex: 1;
             align-content: start;
             margin: 2rem 1rem;
-            height: 620px;width:850px;
+            height: 620px;
             background-size: 100% 100%;
-            box-shadow: 20px 20px 10px gray;
+
             animation: slider 17s linear infinite;
             border-radius: 10px;
         }
@@ -80,25 +98,28 @@
         }
 
         .cont{
-            background-color: powderblue;
+
             display: flex;
             flex-direction: row;
             border-radius: 8px;
         }
 
         .tex{
+            flex: 1;
+            padding: 30px;
             display: flex;
-            padding-left: 110px;
-            padding-top: 30px;
-            align-items: center;
-            text-align: center;
             flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
         }
 
     </style>
 
 </head>
 <body>
+
+<div class="overlay">
 
 <nav>
     <div class="nav-controller">
@@ -128,13 +149,38 @@
     <div class="tex">
         <h2>PSR-ROOFING || Best services</h2>
 
-    <form action="/api/signup" method="get">
+        <p>
+            We are proud to provide high-quality roofing and ceiling services designed to protect,
+            improve, and beautify your home or business. With skilled craftsmanship and a commitment
+            to excellence, our team delivers durable roofing installations and professional ceiling
+            solutions you can trust.
+        </p>
+
+        <p>
+            Our services include roof installation, roof repairs, ceiling installation, ceiling
+            repairs, maintenance, and renovations. We work with precision, using quality materials
+            to ensure long-lasting results and complete customer satisfaction.
+        </p>
+
+        <p>
+            Whether you are building a new property, upgrading your ceiling, or repairing a damaged
+            roof, we are here to help every step of the way.
+        </p>
+
+        <h3>Your roof protects your home. We make sure it protects it well.</h3>
+
+        <p>
+            Contact us today for reliable, affordable, and professional roofing and ceiling services.
+        </p>
+
+
+        <form action="/api/signup" method="get">
         Hey are you new? <input type="submit" value="GET STARTED">
     </form>
 
     </div>
 
 </div>
-
+</div>
 </body>
 </html>
